@@ -19,10 +19,8 @@ class Task {
  private:
 	int n;
 	int m;
-	int contor = 0;
 	vector<int> adj[kNmax];
-	int grad[kNmax];
-	queue<int> queue;
+	int visited[kNmax];
 
 	void read_input() {
 		ifstream fin("in");
@@ -34,6 +32,16 @@ class Task {
 		fin.close();
 	}
 
+	void topsorthelper(int node, vector<int> &topsort){
+		visited[node] = 1;
+		for (int x : adj[node]){
+			if (visited[x] == 0){
+				topsorthelper(x,topsort);
+			}
+		}
+		topsort.push_back(node);
+	}
+
 	vector<int> get_result() {
 		/*
 		TODO: Faceti sortarea topologica a grafului stocat cu liste de
@@ -43,21 +51,9 @@ class Task {
 		*******
 		*/
 		vector<int> topsort;
-		for (int i = 1; i <= n; i++){
-			if (grad[i] == 0){
-				queue.push(i);
-			}
-		}
-		while (!queue.empty()){
-			int x;
-			x = queue.front();
-			queue.pop();
-			topsort[++contor] = x;
-			for (int i = 1; i < adj[x].size();i++){
-				grad[adj[x][i]]--;
-				if (grad[adj[x][i]]== 0){
-					queue.push(adj[x][i]);
-				}
+		for (int i = 1 ; i <= n; i++){
+			if (visited[i] == 0){
+				topsorthelper(i,topsort);
 			}
 		}
 		return topsort;
@@ -65,7 +61,7 @@ class Task {
 
 	void print_output(vector<int> result) {
 		ofstream fout("out");
-		for (int i = 0; i < int(result.size()); i++) {
+		for (int i = int(result.size())-1; i >= 0; i--) {
 			fout << result[i] << ' ';
 		}
 		fout << '\n';
