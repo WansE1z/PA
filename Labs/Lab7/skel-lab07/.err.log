@@ -1,0 +1,121 @@
+
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Running cpp/task-1...
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================
+Compiling cpp/task-2...
+main.cpp:25:13: error: declaration of ‘std::queue<int> Task::queue’ changes meaning of ‘queue’ [-fpermissive]
+   25 |  queue<int> queue;
+      |             ^~~~~
+In file included from /usr/include/c++/9/queue:64,
+                 from main.cpp:4:
+/usr/include/c++/9/bits/stl_queue.h:96:11: note: ‘queue’ declared here as ‘class std::queue<int>’
+   96 |     class queue
+      |           ^~~~~
+========================================

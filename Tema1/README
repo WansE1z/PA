@@ -1,0 +1,57 @@
+# Another gay in GigelLand
+
+Aceasta este o tema care reprezinta prima tema la materia Proiectarea Algoritmilor.
+
+## Structura proiectului
+
+``` bash
+|-- bani.cpp
+|-- gard.cpp
+|-- bomboane.cpp
+|-- Makefile
+```
+
+## Fisiere
+
+- bani.cpp
+
+Complexitate: O(logn) prima parte, si O(n) cea de-a doua.
+
+Avem 5 bancnote, de aici rezulta numarul de combinatii egal cu 5 * combinatii
+bancnote, adica 5 * 2^(n-1). Folosesc o matrice dp[i][j], insemnand cate
+am la pasul i, facute de bancnota j.
+dp[i][1] = dp[i-1][5] + dp[i-1][2] + dp[i-1][3]
+Bancnota de 10 lei = Combinari(bancnote de 500,50,100 de lei)
+
+- gard.cpp
+
+Complexitate: O(nlogn) pentru ca am sortat.
+
+Strategia mea a fost sa sortez pentru ca mine pe mine ma intereseaza sa iau
+intervale cat mai lungi dar in acelasi timp sa le iau in ordine
+crescatoare. Dupa ce sunt sortate, aleg gardurile mai lungi in caz de
+egalitate.
+
+- bomboane.cpp
+
+Complexitate: O(n*m), datorita celor doua for-uri (in numarul de copii, respectiv
+in numarul de bomboane).
+
+M-am gandit sa tin o matrice dp[j][i], respectiv in cate moduri pot
+obtine suma j daca am dat bomboane la primii i copii, astfel folosind programarea dinamica.
+dp[j][7] = dp[j-1][3] + dp[j-1][4] + dp[j-1][5]
+Daca ai 7 bomboane, si intervalul [2 4], conteaza intervalul = [3 4 5].
+
+## Instalarea si rularea programului
+
+Zip-ul va contine un makefile, care are o regula de build, pentru a crea
+fisierele .o. Pentru a rula fiecare problema in parte, exista regulile
+run-p1/run-p2/run-p3, care ruleaza fiecare problema in parte. De asemenea,
+exista si o regula de tip clean, pentru a sterge fisierele .o.
+
+### Note
+
+Fisierul nu este de tip markdown(pentru ca s-a precizat in enuntul temei
+sa nu adaugam extensie), asa ca recomand deschidarea sa printr-un interpretor
+de markdown.Detalii amanuntite legate de implementare se afla in fisierele 
+respectiv, pe baza a comentarii.
