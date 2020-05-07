@@ -1,0 +1,52 @@
+# PA, Robin Hood and Graphs
+
+Aceasta reprezinta a doua tema la materia Proiectarea Algoritmilor.
+
+## Structura proiectului
+
+``` bash
+|-- p2.cpp
+|-- p3.cpp
+|-- Makefile
+|-- README
+```
+
+## Fisiere
+
+- p2.cpp
+
+Complexitate: O(|V| * |E|)
+Explicatie: |V| reprezinta numarul de noduri, iar |E| numarul de muchii.
+Din pricina faptului ca am folosit algoritmul Bellman-Ford, modificat pe 
+alaturi, acesta are complexitatea respectiva.Am facut alegerea de a folosi 
+acest algoritm din cauza faptului ca unele muchii aveau valori negative, 
+asa ca Dijkstra nu mergea folosit aici. 
+
+Probleme intalnite: Pentru optimizari, am incercat atat varianta de a folosi array-uri
+in loc de vector stl si invers, si inca nu am gasit o optimizare in de-ajuns de 
+buna sa functioneze si testul 15.
+
+- p3.cpp
+
+Complexitate: O(|V| * |E|)
+Explicatie : |V| reprezinta numarul de noduri, iar |E| numarul de muchii.
+La aceasta problema am folosit un Dijkstra modificat, doar ca acesta nu functioneaza
+conform algoritmului normal. In loc sa aflu "distanta" minima , in cazul nostrul energia,
+eu caut energia maxima, ca sa ajung intr-un punct. Puteam pune problema si ca eu caut 
+energia minima de poate fi folosita sa se ajunge la o destinatie. 
+
+Probleme intalnite: Momentan nu imi dau seama unde gresesc la aflarea unei rute, de acolo
+fiind si problema aproximarii proaste a energiei.
+
+### Rularea temei
+
+Pentru a rula tema:
+make -> compileaza fisierele
+make run-p2 / make run-p3 -> ruleaza cele doua Probleme
+make beauty -> reformateaza codul personalizat dupa preferintele mele
+
+#### Notes:
+Am inclus cele doua fisiere p1 si bonus cu putin continut ca sa respect cerinta, si anume
+ca trebuie respectat in makefile modelul respectiv, asa ca nu am comentat cele doua build-uri.
+
+Copyright Ionita Radu-Alexandru 322CA
