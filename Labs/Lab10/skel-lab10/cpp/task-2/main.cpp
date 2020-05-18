@@ -1,52 +1,55 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int kNmax = 2e5 + 10;
+const int kNmax = 200005;
+typedef struct {
+  int x, y, cost;
+} muchie;
 
-class Task {
- public:
-    void solve() {
-        read_input();
-        print_output(get_result());
+int viz[kNmax], n, m, sum;
+vector<muchie> v(kNmax);
+
+void sortare() {
+  int flag = 0;
+  while (flag == 0) {
+    flag = 1;
+    for (int i = 1; i <= m - 1; i++) {
+      if (v[i].cost > v[i + 1].cost) {
+        swap(v[i], v[i + 1]);
+        flag = 0;
+      }
     }
+  }
+}
 
- private:
-    int n;
-    int m;
-    vector<pair<int, int> > adj[kNmax];
-
-    void read_input() {
-        ifstream fin("in");
-        fin >> n >> m;
-        for (int i = 1, x, y, w; i <= m; i++) {
-            fin >> x >> y >> w;
-            adj[x].push_back({y, w});
-            adj[y].push_back({x, w});
-        }
-        fin.close();
-    }
-
-    int get_result() {
-        /*
-        TODO: Calculati costul minim al unui arbore de acoperire
-        folosind algoritmul lui Prim.
-        */
-        return 0;
-    }
-
-    void print_output(int result) {
-        ofstream fout("out");
-        fout << result << "\n";
-        fout.close();
-    }
-};
-
-// Please always keep this simple main function!
 int main() {
-    // Allocate a Task object on heap in order to be able to
-    // declare huge static-allocated data structures inside the class.
-    Task *task = new Task();
-    task->solve();
-    delete task;
-    return 0;
+  freopen("in", "r", stdin);
+  freopen("out", "w", stdout);
+  cin >> n >> m;
+  for (int i = 1; i <= m; i++) {
+    cin >> v[i].x >> v[i].y >> v[i].cost;
+  }
+  sortare();
+  int i = 1;
+  for (int k = 1; k <= n - 1; k++) {
+    while (viz[v[i].x] == viz[v[i].y] && viz[v[i].x] != 0) i++;
+    sum += v[i].cost;
+
+    if (viz[v[i].x] + viz[v[i].y] == 0) {
+      viz[v[i].x] = viz[v[i].y] = v[i].x;
+    } else {
+      if (viz[v[i].x] * viz[v[i].y] == 0) {
+        viz[v[i].x] = viz[v[i].y] = viz[v[i].x] + viz[v[i].y];
+      } else {
+        for (int j = 1; j <= n; j++) {
+          if (viz[j] == viz[v[i].x] && j != v[i].x) {
+            viz[j] = viz[v[i].y];
+          }
+        }
+        viz[v[i].x] = viz[v[i].y];
+      }
+      i++;
+    }
+  }
+  cout << sum;
 }
